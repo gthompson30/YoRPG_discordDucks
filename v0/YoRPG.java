@@ -169,10 +169,10 @@ public class YoRPG {
 
     int encounters = 0;
     while( encounters < MAX_ENCOUNTERS ) {
-    if ( !game.playTurn() )
-    break;
-    encounters++;
-    System.out.println();
+      if ( !game.playTurn() )
+        break;
+      encounters++;
+      System.out.println();
     }
     /*================================================
     System.out.println( "Thy game doth be over." );
