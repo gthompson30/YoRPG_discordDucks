@@ -1,0 +1,2 @@
+We don't really have any notes just yet.
+We're still a bit confused about how extends works, however
