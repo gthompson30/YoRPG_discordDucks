@@ -1,2 +1,4 @@
-We don't really have any notes just yet.
-We're still a bit confused about how extends works, however
+Notables
+ - Instance variables in classes need to be protected (instead of private) to be accessed by subclasses.
+ - The keyword extends allows for a subclass to inherit the methods and protected variables of the superclass.
+ - The variables in the subclasses don't need to be created again (int _defense;), they already exist in the superclass, and can be re-intialized with a constructor.
