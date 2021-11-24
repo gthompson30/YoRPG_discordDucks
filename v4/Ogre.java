@@ -1,5 +1,6 @@
 public class Ogre extends Monster {
 	public Ogre() {
+		super();
 		_name = "Shrek";
 		_hitPts = 5;
 		_strength = 5;

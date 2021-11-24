@@ -91,19 +91,31 @@ public class YoRPG {
     s += "Selection: ";
     System.out.print( s );
 
-    try {
-	    difficulty = Integer.parseInt( in.readLine() );
+    boolean setDifficulty = false;
+    while (!setDifficulty) {
+        try {
+    	    difficulty = Integer.parseInt( in.readLine() );
+	    setDifficulty = true;
+        }
+        catch ( Exception e ) {
+   	    System.out.println("HUH? NO HATH PICKED A NUMBER??");
+	    System.out.println("CHOOSE AGAIN PLEASE");
+        }
     }
-    catch ( IOException e ) { }
 
     s = "Intrepid protagonist, what doth thy call thyself? (State your name): ";
     System.out.print( s );
 
-    try {
+    boolean setName = false;
+    while (!setName) {
+        try {
 	    name = in.readLine();
+            setName = true;
+        }
+        catch ( IOException e ) {
+            System.out.println("Hmmmm you did something wrong, try again:");
+        }
     }
-    catch ( IOException e ) { }
-
     s = "And which class would you like to be? (Cleric / Paladin / Wizard): ";
     System.out.print( s );
     try {
@@ -112,15 +124,17 @@ public class YoRPG {
             if (_class.equals("paladin")) {
                 Paladin pat = new Paladin(name);
 	    }
-            if (_class.equals("cleric")) {
+            else if (_class.equals("cleric")) {
                 Cleric pat = new Cleric(name);
             }
-            if (_class.equals("wizard")) {
+            else if (_class.equals("wizard")) {
                 Wizard pat = new Wizard(name);
             }
-	    System.out.println(pat);
+	    System.out.println(pat.about());
     }
-    catch ( IOException e ) { }
+    catch ( IOException e ) {
+	    System.out.println("Twas not a valid class name");
+    }
 
     //instantiate the player's character
     pat = new Protagonist( name );

@@ -1,9 +1,10 @@
 public class Paladin extends Protagonist {
-        String _name;
+        /*String _name;
 	int _hitPts, _strength, _defense;
-	double _attack;
+	double _attack;*/
 
 	public Paladin() {
+		super();
 		_name = "Generic Paladin";
 		_hitPts = 10;
 		_strength = 4;

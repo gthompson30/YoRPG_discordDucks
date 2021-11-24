@@ -1,9 +1,10 @@
 public class Cleric extends Protagonist {
-        String _name;
+        /*String _name;
         int _hitPts, _strength, _defense;
-        double _attack;
+        double _attack;*/
 
 	public Cleric() {
+		super();
 		_name = "Generic Cleric";
 		_hitPts = 3;
 		_strength = 7;

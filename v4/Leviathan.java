@@ -1,5 +1,6 @@
 public class Leviathan extends Monster {
 	public Leviathan() {
+		super();
 		_name = "Thomas Hobbes";
 		_hitPts = 10;
 		_strength = 5;

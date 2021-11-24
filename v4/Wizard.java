@@ -1,9 +1,10 @@
 public class Wizard extends Protagonist {
-        String _name;
+        /*String _name;
         int _hitPts, _strength, _defense;
-        double _attack;
+        double _attack;*/
 
 	public Wizard() {
+		super();
 		_name = "Harry";
 		_hitPts = 3;
 		_strength = 9;

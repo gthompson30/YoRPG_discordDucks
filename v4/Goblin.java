@@ -1,5 +1,6 @@
 public class Goblin extends Monster {
 	public Goblin() {
+		super();
 		_name = "gr33nb0y";
 		_hitPts = 3;
 		_strength = 4;
