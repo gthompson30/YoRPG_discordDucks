@@ -9,6 +9,13 @@ Our New Classes:
 - Monsters: Ogre, Goblin, Leviathan
 
 Explanation Of New Classes:
+- Paladin: Has a high hitpoint stat, a reduced strength stat, and moderate defense and attack.
+- Cleric: Has higher defense and attack stats, but reduced hitpoints and moderate strength.
+- Wizard: Has a high strength stat, a reduced hitpoint stat, and moderate defense and attack.
+
+- Goblin: Has a high defense stat, but reduced hitpoints.
+- Leviathan: Has high hitpoint and attack stats, with reduced defense.
+- Ogre: Has a high attack stat, a reduced defense stat, and moderate hitpoints and strength.  
 
 Version to Version Modifications:
 - v0: YoRPG skeleton and creation of classes for Monster and Protagonist. 
