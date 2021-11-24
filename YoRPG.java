@@ -69,7 +69,28 @@ public class YoRPG {
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-  
+  public Protagonist setCharacter(String s, String name) {
+    Protagonist c = new Protagonist();
+    if (s.toLowerCase().equals("paladin"))
+      c = new Paladin(name);
+    else if (s.toLowerCase().equals("cleric"))
+      c = new Cleric(name);
+    else if (s.toLowerCase().equals("wizard"))
+      c = new Wizard(name);
+    return c;
+  }
+
+  public Monster setMonster() {
+    Monster c = new Monster();
+    int choice = (int)(Math.random() * 3);
+    if (choice == 0)
+      c = new Ogre();
+    else if (choice == 1)
+      c = new Goblin();
+    else if (choice == 2)
+      c = new Leviathan();
+    return c;
+  }
   // ~~~~~~~~~~~~~~ METHODS ~~~~~~~~~~~~~~~~~~~
 
   /*=============================================
@@ -113,27 +134,17 @@ public class YoRPG {
             setName = true;
         }
         catch ( IOException e ) {
-            System.out.println("Hmmmm you did something wrong, try again:");
+            System.out.print("Hmmmm you did something wrong, try again.\nIntrepid protagonist, what doth thy call thyself? (State your name): ");
         }
     }
     s = "And which class would you like to be? (Cleric / Paladin / Wizard): ";
     
-    String charName;
     System.out.print( s );
     try {
 	    // we are currently running into an error here, where it's not able to keep track of the class.
 	    // see this comment: https://piazza.com/class/kue5pmk0w7n70n?cid=294_f1
             _class = in.readLine();
-            _class = _class.toLowerCase();
-            if (_class.equals("paladin")) {
-                charName = "paladin"; // Paladin pat = new Paladin(name);
-	    }
-            else if (_class.equals("cleric")) {
-                charName = "cleric"; // Cleric pat = new Cleric(name);
-            }
-            else if (_class.equals("wizard")) {
-                charName = "wizard"; // Wizard pat = new Wizard(name);
-            }
+            pat = setCharacter(_class, name);
 	    // Currently does not work: System.out.println(pat.about());
     }
     catch ( IOException e ) {
@@ -141,8 +152,6 @@ public class YoRPG {
     }
 
     //instantiate the player's character
-    System.out.println(charName);
-    // no don't. pat = new Protagonist( name );
 
   }//end newGame()
 
@@ -162,8 +171,8 @@ public class YoRPG {
     else {
       System.out.println( "\nLo, yonder monster approacheth!" );
 
-      smaug = new Monster();
-      System.out.println(pat);
+      smaug = setMonster();
+      System.out.println("You encountered a Monster named " + smaug._name);
 
       while( smaug.isAlive() && pat.isAlive() ) {
 
@@ -175,7 +184,9 @@ public class YoRPG {
           System.out.println( "\t1: Nay.\n\t2: Aye!" );
           i = Integer.parseInt( in.readLine() );
         }
-        catch ( IOException e ) { }
+        catch ( IOException e ) {
+	  System.out.println("AGH YOU DIDNT ENTER SOMETHING VALID");
+	}
 
         if ( i == 2 )
           pat.specialize();
@@ -188,7 +199,7 @@ public class YoRPG {
         System.out.println( "\n" + pat.getName() + " dealt " + d1 +
                             " points of damage.");
 
-        System.out.println( "\n" + "Ye Olde Monster smacked " + pat.getName() +
+        System.out.println( "\n" + smaug._name + " smacked " + pat.getName() +
                             " for " + d2 + " points of damage.");
       }//end while
 

@@ -11,7 +11,7 @@ public class Protagonist extends Character {
 
     // ~~~~~~~~~~~ INSTANCE VARIABLES ~~~~~~~~~~~
     protected String _name = "Brfxxccxxmnpcccclllmmnprxvclmnckssqlbb11116";
-    protected int _hitPts;
+    public int _hitPts;
     protected int _strength;
     protected int _defense;
     protected double _attack;
