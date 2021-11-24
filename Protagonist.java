@@ -10,7 +10,7 @@ https://github.com/ap251/library/blob/main/lab01/YoRPG/v0/Protagonist.java
 public class Protagonist extends Character {
 
     // ~~~~~~~~~~~ INSTANCE VARIABLES ~~~~~~~~~~~
-    protected String _name = "J. Doe";
+    protected String _name = "Brfxxccxxmnpcccclllmmnprxvclmnckssqlbb11116";
     protected int _hitPts;
     protected int _strength;
     protected int _defense;
@@ -99,6 +99,19 @@ public class Protagonist extends Character {
     public void normalize() {
         _attack = .4;
         _defense = 40;
+    }
+
+    //not explicitly required but very helpful nonetheless
+    public String toString() {
+        String out = "";
+        out += "-----------------\n";
+        out += " Name: " + _name + "\n";
+        out += " Hit Points: " + _hitPts + "\n";
+        out += " Strength: " + _strength + "\n";
+        out += " Defense: " + _defense + "\n";
+        out += " Attack: " + _attack + "\n";
+        out += "-----------------\n";
+        return out;
     }
 
 }//end class Protagonist

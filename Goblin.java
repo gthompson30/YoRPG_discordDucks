@@ -1,5 +1,6 @@
 public class Goblin extends Monster {
 	public Goblin() {
+		super();
 		_name = "gr33nb0y";
 		_hitPts = 3;
 		_strength = 4;
@@ -13,14 +14,6 @@ public class Goblin extends Monster {
 	}
 
         public String about() {
-                String out = "";    
-                out += "-----------------\n";
-                out += " Name: " + _name + "\n";
-                out += " Hit Points: " + _hitPts + "\n";
-                out += " Strength: " + _strength + "\n";
-                out += " Defense: " + _defense + "\n";
-                out += " Attack: " + _attack + "\n";
-                out += "-----------------\n";
-                return out;
+                return "Axx axx axx axx axx b tf max lgxtdr zhuebg, uxmvat atw mh nlx t Vtxltk'l Vbiaxk wxvhwxk mh lheox fx! B tf oxkr wxyxglbox, hdtr tm tmmtvd, unm phklx tm ai tgw lmkxgzma.";
         }
 }

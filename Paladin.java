@@ -1,9 +1,10 @@
 public class Paladin extends Protagonist {
-        String _name;
+        /*String _name;
 	int _hitPts, _strength, _defense;
-	double _attack;
+	double _attack;*/
 
 	public Paladin() {
+		super();
 		_name = "Generic Paladin";
 		_hitPts = 10;
 		_strength = 4;
@@ -17,14 +18,6 @@ public class Paladin extends Protagonist {
 	}
 
 	public String about() {
-		String out = "";
-		out += "-----------------\n";
-		out += " Name: " + _name + "\n";
-		out += " Hit Points: " + _hitPts + "\n";
-		out += " Strength: " + _strength + "\n";
-		out += " Defense: " + _defense + "\n";
-		out += " Attack: " + _attack + "\n";
-		out += "-----------------\n";
-		return out;
+		return "An army leader, fierce and resilient. Has very high hitpoints, fair strength and attack, but tragically low defense.\n";
 	}
 }

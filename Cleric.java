@@ -1,9 +1,10 @@
 public class Cleric extends Protagonist {
-        String _name;
+        /*String _name;
         int _hitPts, _strength, _defense;
-        double _attack;
+        double _attack;*/
 
 	public Cleric() {
+		super();
 		_name = "Generic Cleric";
 		_hitPts = 3;
 		_strength = 7;
@@ -17,14 +18,6 @@ public class Cleric extends Protagonist {
 	}
 
         public String about() {
-                String out = "";    
-                out += "-----------------\n";
-                out += " Name: " + _name + "\n";
-                out += " Hit Points: " + _hitPts + "\n";
-                out += " Strength: " + _strength + "\n";
-                out += " Defense: " + _defense + "\n";
-                out += " Attack: " + _attack + "\n";
-                out += "-----------------\n";
-                return out;
+                return "A skilled tradesman at healing, giving him great strength! HOWEVER, he is also able to make poisonous potions and therefore has moderate attack. He is trash at all else.";
         }
 }

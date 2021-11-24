@@ -117,26 +117,32 @@ public class YoRPG {
         }
     }
     s = "And which class would you like to be? (Cleric / Paladin / Wizard): ";
+    
+    String charName;
     System.out.print( s );
     try {
+	    // we are currently running into an error here, where it's not able to keep track of the class.
+	    // see this comment: https://piazza.com/class/kue5pmk0w7n70n?cid=294_f1
             _class = in.readLine();
             _class = _class.toLowerCase();
             if (_class.equals("paladin")) {
-                Paladin pat = new Paladin(name);
+                charName = "paladin"; // Paladin pat = new Paladin(name);
 	    }
-            if (_class.equals("cleric")) {
-                Cleric pat = new Cleric(name);
+            else if (_class.equals("cleric")) {
+                charName = "cleric"; // Cleric pat = new Cleric(name);
             }
-            if (_class.equals("wizard")) {
-                Wizard pat = new Wizard(name);
+            else if (_class.equals("wizard")) {
+                charName = "wizard"; // Wizard pat = new Wizard(name);
             }
+	    // Currently does not work: System.out.println(pat.about());
     }
     catch ( IOException e ) {
 	    System.out.println("Twas not a valid class name");
     }
 
     //instantiate the player's character
-    pat = new Protagonist( name );
+    System.out.println(charName);
+    // no don't. pat = new Protagonist( name );
 
   }//end newGame()
 
@@ -157,6 +163,7 @@ public class YoRPG {
       System.out.println( "\nLo, yonder monster approacheth!" );
 
       smaug = new Monster();
+      System.out.println(pat);
 
       while( smaug.isAlive() && pat.isAlive() ) {
 

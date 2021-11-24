@@ -1,5 +1,6 @@
 public class Leviathan extends Monster {
 	public Leviathan() {
+		super();
 		_name = "Thomas Hobbes";
 		_hitPts = 10;
 		_strength = 5;
@@ -13,14 +14,6 @@ public class Leviathan extends Monster {
 	}
 
         public String about() {
-                String out = "";    
-                out += "-----------------\n";
-                out += " Name: " + _name + "\n";
-                out += " Hit Points: " + _hitPts + "\n";
-                out += " Strength: " + _strength + "\n";
-                out += " Defense: " + _defense + "\n";
-                out += " Attack: " + _attack + "\n";
-                out += "-----------------\n";
-                return out;
+		return "The all-powerful creature, with epic hit points and great attack. Moderately strong, but Leviathan's tragic insecurity is an inability to defend itself.";
         }
 }
