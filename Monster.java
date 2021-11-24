@@ -11,10 +11,11 @@ https://github.com/ap251/library/blob/main/lab01/YoRPG/v0/Monster.java
 public class Monster extends Character {
 
   // ~~~~~~~~~~~ INSTANCE VARIABLES ~~~~~~~~~~~
-  private int _hitPts;
-  private int _strength;
-  private int _defense;
-  private double _attack;
+  protected int _hitPts;
+  protected int _strength;
+  protected int _defense;
+  protected double _attack;
+  protected String _name;
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -28,6 +29,7 @@ public class Monster extends Character {
     _strength = 20 + (int)( Math.random() * 45 ); // [20,65)
     _defense = 20;
     _attack = 1;
+    _name = "Generic Monster";
   }
 
 

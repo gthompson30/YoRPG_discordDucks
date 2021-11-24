@@ -16,10 +16,22 @@ https://github.com/ap251/library/blob/main/lab01/YoRPG/v0/YoRPG.java
  * (If you feel other changes are merited, note what and why, so that we may discuss on the 'morrow.)
  * 
  * DISCO:
- *
+ * 
  * QCC:
  * 
  **********************************************/
+
+/***
+
+ * Modifications made (during HW 2021-11-23)
+ *  - Finished creating all subclasses for Characters and Monsters
+ *  - Added about() methods for all aforementioned subclasses
+ *  - Changed accessibility for variables in Monster to be "protected"
+ *  - Changed settings for each of the subclasses, to best fit their role
+ *  - Added input into driver file accept input for character type, which stores type in variable
+ *  - Wrote this list
+
+***/
 
 import java.io.*;
 import java.util.*;
@@ -34,6 +46,8 @@ public class YoRPG {
   //each round, a Protagonist and a Monster will be instantiated...
   private Protagonist pat;
   private Monster smaug;
+
+  // creating an instance of every type, to be used;
 
   private int moveCount;
   private boolean gameOver;
@@ -67,6 +81,7 @@ public class YoRPG {
   public void newGame() {
     String s;
     String name = "";
+    String _class;
     s = "~~~ Welcome to Ye Olde RPG! ~~~\n";
 
     s += "\nChoose your difficulty: \n";
@@ -76,18 +91,49 @@ public class YoRPG {
     s += "Selection: ";
     System.out.print( s );
 
-    try {
-	    difficulty = Integer.parseInt( in.readLine() );
+    boolean setDifficulty = false;
+    while (!setDifficulty) {
+        try {
+    	    difficulty = Integer.parseInt( in.readLine() );
+	    setDifficulty = true;
+        }
+        catch ( Exception e ) {
+   	    System.out.println("HUH? NO HATH PICKED A NUMBER??");
+	    System.out.println("CHOOSE AGAIN PLEASE");
+        }
     }
-    catch ( IOException e ) { }
 
     s = "Intrepid protagonist, what doth thy call thyself? (State your name): ";
     System.out.print( s );
 
-    try {
+    boolean setName = false;
+    while (!setName) {
+        try {
 	    name = in.readLine();
+            setName = true;
+        }
+        catch ( IOException e ) {
+            System.out.println("Hmmmm you did something wrong, try again:");
+        }
     }
-    catch ( IOException e ) { }
+    s = "And which class would you like to be? (Cleric / Paladin / Wizard): ";
+    System.out.print( s );
+    try {
+            _class = in.readLine();
+            _class = _class.toLowerCase();
+            if (_class.equals("paladin")) {
+                Paladin pat = new Paladin(name);
+	    }
+            if (_class.equals("cleric")) {
+                Cleric pat = new Cleric(name);
+            }
+            if (_class.equals("wizard")) {
+                Wizard pat = new Wizard(name);
+            }
+    }
+    catch ( IOException e ) {
+	    System.out.println("Twas not a valid class name");
+    }
 
     //instantiate the player's character
     pat = new Protagonist( name );

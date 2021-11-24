@@ -118,6 +118,7 @@ public class YoRPG {
             if (_class.equals("wizard")) {
                 Wizard pat = new Wizard(name);
             }
+	    System.out.println(pat);
     }
     catch ( IOException e ) { }
 

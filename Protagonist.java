@@ -10,11 +10,11 @@ https://github.com/ap251/library/blob/main/lab01/YoRPG/v0/Protagonist.java
 public class Protagonist extends Character {
 
     // ~~~~~~~~~~~ INSTANCE VARIABLES ~~~~~~~~~~~
-    private String _name = "J. Doe";
-    private int _hitPts;
-    private int _strength;
-    private int _defense;
-    private double _attack;
+    protected String _name = "J. Doe";
+    protected int _hitPts;
+    protected int _strength;
+    protected int _defense;
+    protected double _attack;
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
