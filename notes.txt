@@ -1,4 +1,27 @@
-Notables
+Team discordDucks ([Gabriel Thompson, Kartik Vanjani, Marcus Wu] + [Iggy, Krishh, Nat] (our duckies))
+APCS
+K39 -- Dated but Timeless
+2021-11-17
+time spent (including class time): 3.2hrs-ish
+
+Notables / DISCO:
  - Instance variables in classes need to be protected (instead of private) to be accessed by subclasses.
  - The keyword extends allows for a subclass to inherit the methods and protected variables of the superclass.
- - The variables in the subclasses don't need to be created again (int _defense;), they already exist in the superclass, and can be re-intialized with a constructor.
+ - The variables in the subclasses don't need to be created again (int _defense;), they already exist in the superclass,
+   and can be re-intialized with a constructor.
+ - super() returns the constructor of the "superclass" based on the format of the arguments.
+ - "super" returns *the* superclass
+ - this() returns the constructor of the current class, based on the format of the arguments.
+ - "this" returns the current class
+ - subclasses share all of the properties of their superclasses, and more if added.
+ - An instance of an object can take the value of an instance of one of it's subclasses
+
+QCC:
+ - On line 136 of the final version of YoRPG.java, the program takes in a string and yields an exception if the user
+   typed in something "incorrect". What could you enter that would go to the exception?
+ - What exactly was the purpose of specialized()/normalized()? What does it mean in RPG lingo? Our specialized/normalized
+   code is from Mr. Mykolyk's "care pkg" in ap251/library.
+ - With all due respect, how were expected to complete this in "<=30min"?
+
+ - Unrelated, but what exactly is the purpose of the chipotle-test-kitchen? Is it just a repository for code snippets
+   that are posted in Piazza? (Source: instructor response to https://piazza.com/class/kue5pmk0w7n70n?cid=283)
