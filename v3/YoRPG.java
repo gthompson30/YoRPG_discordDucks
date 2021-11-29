@@ -90,7 +90,8 @@ public class YoRPG {
     catch ( IOException e ) { }
 
     //instantiate the player's character
-    pat = new Protagonist( name );
+    // there are some issues with inheritance here
+    // Broken as of now: pat = new Protagonist( name );
 
   }//end newGame()
 
