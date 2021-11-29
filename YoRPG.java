@@ -140,14 +140,16 @@ public class YoRPG {
             System.out.print("Hmmmm you did something wrong, try again.\nIntrepid protagonist, what doth thy call thyself? (State your name): ");
         }
     }
-    s = "And which class would you like to be? (Cleric / Paladin / Wizard): ";
-    
+    s  = "\nAnd which class would you like to be?\n\n";
+    s += "  * Cleric: " + new Cleric().about() + "\n";
+    s += "  * Paladin: " + new Paladin().about();
+    s += "  * Wizard: " + new Wizard().about() + "\n\n";
+    s += "Enter class name of your choice (cleric/paladin/wizard): ";    
     System.out.print( s );
     try {
-	    // we are currently running into an error here, where it's not able to keep track of the class.
-	    // see this comment: https://piazza.com/class/kue5pmk0w7n70n?cid=294_f1
             _class = in.readLine();
             pat = setCharacter(_class, name);
+            System.out.println("\nClass name \"" + _class.toUpperCase() + "\" successfully chosen.\n");
     }
     catch ( IOException e ) {
 	    System.out.println("Twas not a valid class name");
