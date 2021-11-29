@@ -4,11 +4,12 @@ Our "YoRPG" project for APCS with Mr. Mykolyk
 Team discordDucks: Kartik Vanjani, Gabriel Thompson, Marcus Wu, Iggy, Krrish, Nat
 
 
-**Our New Classes: **
+**Our New Classes:**
 - Characters: Paladin, Cleric, Wizard
 - Monsters: Ogre, Goblin, Leviathan
 
 **Explanation Of New Classes:**
+
 *Characters:*
 - Paladin: Has a high hitpoint stat, a reduced strength stat, and moderate defense and attack.
 - Cleric: Has higher defense and attack stats, but reduced hitpoints and moderate strength.
@@ -27,5 +28,5 @@ Team discordDucks: Kartik Vanjani, Gabriel Thompson, Marcus Wu, Iggy, Krrish, Na
 - v4: We solved the errors that we had gotten in the Character and Monster classes, added character and monster classes, and the about sections for the different   characters. 
 - v5: Final changes, made the game completely playable. Fixed errors with "pat" inheriting other subclasses.
 
-Ways In Which We Would Like To Grow The Game:
+**Ways In Which We Would Like To Grow The Game:**
 - It would be cool to add other features of RPGs, such as a shop or a currency, or some sort of larger storyline. Alas we have no time for that
